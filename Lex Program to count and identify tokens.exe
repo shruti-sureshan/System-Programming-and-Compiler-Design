@@ -1,0 +1,27 @@
+%option noyywrap
+%{
+	#include<stdio.h>
+	int token=0,i=0;
+%}
+
+%%
+"if"|"else"|"printf"|"while"   { printf("keyword\n");    token++;   }
+[A-Za-z][0-9]*  { if(i==0)  { printf("variable\n");  token++;   }}
+[A-Za-z]*  {  if(i==0)  {  printf("variable\n");  token++;  }}
+"{"|"}"   { printf("braces\n");  token++;    }
+"," { printf(" comma\n");   token++;   }
+";"  { printf(" semicolon \n");   token++;   } 
+"("|")"|"["|"]"  {  printf("brackets\n");  token++;   }
+["]  {  if(i==0)   { i++;   printf("string\n");  token++;   }   else { i=0; }}
+"+"|"-"|"*"|"/"|"%"|"&"|"="|"=="   {  if(i==0)  {   printf(" operator \n");   token++;  }}
+[0-9]*   { if(i==0)  {  printf(" number\n");    token++;  }}
+" "|" " { if(i==0)  { printf("space\n");   }}
+\n      { printf("\n no. of tokens: %d",token);   }
+
+%%
+int main()
+{
+	printf(" enter the string\n ");
+	yylex();
+	return 0;
+}

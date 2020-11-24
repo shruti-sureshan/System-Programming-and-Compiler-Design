@@ -1,0 +1,17 @@
+%option noyywrap
+%{
+	#include<stdio.h>
+	int vowels=0;
+	int consonants=0;
+%}
+%%
+[aeiouAEIOU] {printf("Vowel\n");vowels++;}
+[^aeiouAEIOU] {printf("Consonant\n");consonants++;}
+\n {printf("No. of vowels are=%d and No. of consonants=%d",vowels,consonants);}
+%%
+int main()
+{
+	printf("Enter the sentence:");
+	yylex();
+	return 0;
+}

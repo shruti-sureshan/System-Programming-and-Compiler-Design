@@ -1,0 +1,19 @@
+%option noyywrap
+%{
+	#include<stdio.h>
+	int  tchar=0,tword=0,tspace=0,tline=0;
+%}
+%%
+[\t]+ {tspace++;tword++;}
+[^\t\n] {tchar++;}
+\n {tline++;tword++;}
+%%
+int main()
+{
+printf("enter sentences  ");
+yylex();
+printf("number of character::%d\n Number of words::%d\nNumber of spaces::%d\nNumber of lines::%d\n",tchar,tword,tspace,tline);
+getch();
+	return 0;
+}
+
