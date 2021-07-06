@@ -18,3 +18,4 @@ A compiler translates the code written in one language to some other language wi
 4.	Count and identify tokens<br/>
 5.	Count and identify uppercase and lowercase letters<br/>
 
+Technologies used: C, Java 8, Eclipse IDE, Lex
