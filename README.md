@@ -11,11 +11,10 @@ A compiler translates the code written in one language to some other language wi
 •	3 address code<br/>
 •	Code generation<br/>
 •	Common subexpression elimination<br/>
-•	LEX programs:<br/>
-1.	Calculator<br/>
-2.	Count no of characters, spaces, words, lines<br/>
-3.	Count and identify vowels and consonants<br/>
-4.	Count and identify tokens<br/>
-5.	Count and identify uppercase and lowercase letters<br/>
+•	LEX program for Calculator<br/>
+•	LEX program to count no of characters, spaces, words, lines<br/>
+•	LEX program to count and identify vowels and consonants<br/>
+•	LEX program to count and identify tokens<br/>
+•	LEX program to count and identify uppercase and lowercase letters<br/>
 
 Technologies used: C, Java 8, Eclipse IDE, Lex
